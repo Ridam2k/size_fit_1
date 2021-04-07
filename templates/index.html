@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment Tutorial 1</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+<link rel="stylesheet" href="../static/css/style.css">
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login" style= "top: 20%; height: auto;">
+	<h1>Size Recommendation</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<!-- <input type="text" name="fit" placeholder="How do you want the fit to be" required="required" /> -->
+      <div class= "form-input">
+        <label for="fit" class= "form-text">How do you want the fit to be:</label>
+  <select id="fit" name="fit" class= "form-button">
+    <option value="small">Small</option>
+    <option value="fit">Fit</option>
+    <option value="large">Large</option>
+  </select>
+      </div>
+      <div class= "form-input">
+        <p class="form-text" >Enter your bust size</p>
+      <input type="text" name="bust_size" placeholder="Bust size" required="required" />
+      </div>
+      <div class= "form-input">
+        <p class="form-text" >Rating for last product</p>
+		<input type="number" name="rating" placeholder="Rating" required="required" />
+    </div>
+    <div class= "form-input">
+        <p class="form-text" >Your body type</p>
+		<!-- <input type="text" name="body_type" placeholder="Body Type" required="required" /> -->
+    <select id="body_type" name="body_type" class= "form-button">
+      <option value="hourglass">Hourglass</option>
+      <option value="straight & narrow">Straight & Narrow</option>
+      <option value="pear">Pear</option>
+      <option value="athletic">Athletic</option>
+      <option value="full bust">Full Bust</option>
+      <option value="petite">Petite</option>
+      <option value="apple">Apple</option>
+      <option value="unknown">Unknown</option>
+    </select>
+    </div>
+
+    <div class= "form-input">
+      <p class="form-text" >Category of the product</p>
+      <select id="category" name="category" class= "form-button">
+        <option value="gown">Gown</option>
+        <option value="sheath">Sheath</option>
+        <option value="dress">Dress</option>
+        <option value="skirt">Skirt</option>
+        <option value="top">Top</option>
+        <option value="shirt">Shirt</option>
+        <option value="tank">Tank Top</option>
+        <option value="coat">Coat</option>
+        <option value="overcoat">Overcoat</option>
+        <option value="sweatshirt">Sweatshirt</option>
+        <option value="jacket">Jacket</option>
+      </select>
+      </div>
+
+		
+    <!-- <input type="text" name="category" placeholder="Category of product" required="required" /> 
+    -->
+    <div class= "form-input">
+      <p class="form-text" >Enter height (in cms)</p>
+      <input type="number" name="height" step="0.1" placeholder="Eg. 167.5 " required="required" />
+  </div>
+	
+  <div class= "form-input">
+    <p class="form-text" >Enter your age</p>
+    <input type="number" name="age" placeholder="Age" required="required" />
+</div>
+
+<div class= "form-input">
+  <p class="form-text" >Enter your weight (in kgs)</p>
+  <input type="number" name="weight" placeholder="Eg. 54" required="required" />
+</div>
+		
+        <button type="submit" class="btn-custom" style="background-color: #ee0979;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50em;">Predict your size</button>
+    </form>
+
+   <br>
+   <br>
+
+   {{ prediction_text }}
+
+   <br>
+   <br>
+
+ </div>
+</body>
+</html>
