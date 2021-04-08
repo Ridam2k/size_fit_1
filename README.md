@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-This is the first and the main component of our solution for **MyntraHackerramp: WeForShe** for the theme- **Size and Fit**. 
+This is the first and the main component of our solution : **YourFit** for **MyntraHackerramp: WeForShe** , theme- **Size and Fit**. 
 The second component can be found here - [**SizeFit_2**](https://github.com/Ridam2k/size_fit_2.git)
 
 Before going further please see the demo - ****Insert Video****
@@ -24,7 +24,7 @@ All these components are tied together by our interactive website that can be ho
 
 We have tried to keep the installation process as simple as possible. Please keep note of the following requirements and points:
 
--   The API for the size recommendation is hosted on a python server; it is therefore necessary to have **Python version >=3.8** installed on the local machine. We highly recommend the use of **Anaconda** for the same.
+-   The API for the size recommendation is hosted on a python server; it is therefore necessary to have **Python version >=3.7** installed on the local machine. We highly recommend the use of **Anaconda** for the same.
 - Please follow the exact steps.The App is tested and verified only if each step is followed.
 -   First time deployment of app might take 1 -2 minutes.
 
@@ -37,13 +37,14 @@ $ cd size_fit_1
 
 Step 2 - Check/install requirements
 ```sh
-$ pip install pandas numpy flask
+$ pip install pandas numpy flask joblib
 $ npm install
 ```
 
 Step 3- Download the pre-trained ML model from [Google Drive](https://drive.google.com/file/d/1k1smJ4WUg9q1qgzVtB1SDv7PHczVLjAt/view?usp=sharing) and place it in the main folder i.e. Size_fit_1
 
 The directory structure should be as follows:
+```
  .
 ├── static
 │   ├── css
@@ -62,13 +63,14 @@ The directory structure should be as follows:
 ├── data.csv
 ├── testing.csv
 ├── README.md
+```
 
 Step 4- Run the main server
 ```sh
 $ python app.py
 ```
 Step  5- In a separate terminal, run [**[SizeFit_2](https://github.com/Ridam2k/size_fit_2.git)**] 
-- Clone the repository
+- Clone the repository in a separate folder
 ```sh
 $ git clone https://github.com/Ridam2k/size_fit_2.git
 $ cd size_fit_2
