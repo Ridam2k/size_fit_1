@@ -4,7 +4,8 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-This is the first and the main component of our project. The second component can be found here - [**SizeFit_2**](https://github.com/Ridam2k/size_fit_2.git)
+This is the first and the main component of our solution for **MyntraHackerramp: WeForShe** for the theme- **Size and Fit**. 
+The second component can be found here - [**SizeFit_2**](https://github.com/Ridam2k/size_fit_2.git)
 
 Before going further please see the demo - ****Insert Video****
 The detailed explanation regarding tech stack and training can be found at : ***PPT LINK***
@@ -12,7 +13,7 @@ The detailed explanation regarding tech stack and training can be found at : ***
 
 # Components
    
-   Our solution for MyntraHackerramp: WeForShe for the theme Size and Fit consists of the following components:  
+   Our proposed solution consists of the following components:  
 -   Size Recommendation- An ML-based component that suggests the most appropriate size for a particular product by factoring in your body measurements such as height, bust size, body type,etc. 
 -   Nearest Size - Based on the measurements of clothes you already own and fit you well, this component employs a simple algorithm to recommend the size for the interested product
 -   Outfit visualiser - This Unity3D- based component enables you to visualise all your mix-and-match outfit ideas and select the one that suits you best 
