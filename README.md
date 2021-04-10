@@ -7,10 +7,6 @@
 This is the first and the main component of our solution : **YourFit** for **MyntraHackerramp: WeForShe** , theme- **Size and Fit**. 
 The second component can be found here - [**SizeFit_2**](https://github.com/Ridam2k/size_fit_2.git)
 
-Before going further please see the demo - ****Insert Video****
-The detailed explanation regarding tech stack and training can be found at : ***PPT LINK***
-
-
 # Components
    
    Our proposed solution consists of the following components:  
